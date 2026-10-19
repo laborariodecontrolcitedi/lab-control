@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio de Control | CITEDI - IPN</title>
+    
+    <!-- Fuentes y Recursos -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS (Framework de diseño) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        ipn: {
+                            DEFAULT: '#6b1c36', // Guinda IPN
+                            light: '#8a2446',
+                            dark: '#4a1325',
+                        },
+                        tech: {
+                            blue: '#0284c7',
+                            slate: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .hero-bg {
+            background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('https://lh3.googleusercontent.com/gg-dl/AHiVA1kZkyF6l4qzC8SOfM4rBDF0QhcIaRXVJGnxiNjP_nJtxopsJQ0q8tSrcQA-SuqDVe3-ekw2oRLzZUUj9U5KCpkJsrKVjT3Cntr54B9f_sVyKzkwGqSXsSqviG7wQbIXxWQnNWP0y4JmWhPVi6W08crWV-2TYubzrjkNhyfTQuul8SdB');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- Navegación -->
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <img src="https://lh3.googleusercontent.com/gg/AJWXcNfJJK3iPtmm2EtXQYsFox6Jpv3SBWbgjZBxxH9HJ_f8wKDkdof_99FuqHIooWyRtFY5C-V_IRlc3zfv4FDnCQ1ioYzAR3YVs8eaAlrpUAbUtsVklWRaPPOiPm6GZncacGiFeWqIADgg65HvGFK8fHgyYFIZtkF9nd6J1UwO3eE8vZcbe-Kxoh9IzbvVg6NTy-Ihja8ZEEWkt5cdE6mKrc9BDLNQo83crsGFCnsloHCZktW4AYOqW-HRVQ0t2phj4Y2aL7RomHncxKPkJ11RBbk_zQQ6kor_WiM=s0" alt="Logo Lab" class="h-12 w-12 rounded-full object-cover mr-3 border-2 border-ipn">
+                    <span class="font-bold text-xl text-tech-slate">Control Lab <span class="text-ipn hidden md:inline">| CITEDI-IPN</span></span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-gray-600 hover:text-ipn font-semibold transition">Inicio</a>
+                    <a href="#lineas" class="text-gray-600 hover:text-ipn font-semibold transition">Investigación</a>
+                    <a href="#plataformas" class="text-gray-600 hover:text-ipn font-semibold transition">Plataformas</a>
+                    <a href="#equipo" class="text-gray-600 hover:text-ipn font-semibold transition">Equipo</a>
+                    <a href="#logros" class="bg-ipn text-white px-5 py-2 rounded-full hover:bg-ipn-light transition font-semibold">Logros</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section id="inicio" class="hero-bg h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <p class="text-tech-blue font-bold tracking-widest uppercase mb-3">Centro de Investigación y Desarrollo de Tecnología Digital</p>
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
+                    Laboratorio de <span class="text-ipn-light">Control</span>
+                </h1>
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl">
+                    Transformamos matemáticas abstractas en estabilidad física. Investigamos y desarrollamos algoritmos de control avanzado para sistemas dinámicos complejos.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#lineas" class="bg-ipn text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-ipn-light transition text-center">Conoce nuestro trabajo</a>
+                    <a href="#equipo" class="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-tech-slate transition text-center">Ver Integrantes</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://lh3.googleusercontent.com/gg/AJWXcNfJJK3iPtmm2EtXQYsFox6Jpv3SBWbgjZBxxH9HJ_f8wKDkdof_99FuqHIooWyRtFY5C-V_IRlc3zfv4FDnCQ1ioYzAR3YVs8eaAlrpUAbUtsVklWRaPPOiPm6GZncacGiFeWqIADgg65HvGFK8fHgyYFIZtkF9nd6J1UwO3eE8vZcbe-Kxoh9IzbvVg6NTy-Ihja8ZEEWkt5cdE6mKrc9BDLNQo83crsGFCnsloHCZktW4AYOqW-HRVQ0t2phj4Y2aL7RomHncxKPkJ11RBbk_zQQ6kor_WiM=s0" alt="Logo Central" class="w-64 h-64 md:w-96 md:h-96 rounded-full shadow-2xl border-4 border-white/20 object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- Líneas de Investigación -->
+    <section id="lineas" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold text-ipn uppercase tracking-wide">Áreas de Estudio</h2>
+                <p class="mt-2 text-4xl font-extrabold text-tech-slate">Líneas de Investigación</p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">Aplicamos la teoría de control no lineal a tres pilares fundamentales de la tecnología moderna.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Convertidores -->
+                <div class="bg-gray-50 rounded-2xl p-8 shadow-sm hover:shadow-xl transition border border-gray-100 flex flex-col items-center text-center">
+                    <div class="w-20 h-20 bg-ipn/10 rounded-full flex items-center justify-center mb-6 text-ipn text-3xl">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-tech-slate mb-4">Convertidores de Potencia</h3>
+                    <p class="text-gray-600 mb-6 flex-grow">Control de microrredes DC y estabilización de energía ante cargas de potencia constante para un futuro sustentable.</p>
+                </div>
+                
+                <!-- Vehículos -->
+                <div class="bg-gray-50 rounded-2xl p-8 shadow-sm hover:shadow-xl transition border border-gray-100 flex flex-col items-center text-center">
+                    <div class="w-20 h-20 bg-ipn/10 rounded-full flex items-center justify-center mb-6 text-ipn text-3xl">
+                        <i class="fa-solid fa-drone"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-tech-slate mb-4">Vehículos Autónomos</h3>
+                    <p class="text-gray-600 mb-6 flex-grow">Leyes de control aplicadas a la navegación, estabilidad y trayectoria de vehículos aéreos y terrestres no tripulados.</p>
+                </div>
+
+                <!-- Robots -->
+                <div class="bg-gray-50 rounded-2xl p-8 shadow-sm hover:shadow-xl transition border border-gray-100 flex flex-col items-center text-center">
+                    <div class="w-24 h-24 mb-6 rounded-full overflow-hidden shadow-md">
+                        <img src="https://lh3.googleusercontent.com/gg-dl/AHiVA1l24sI15AVJLXqdLnKrzyE6mAc4jhoHVaML42pK4rsmQaTDyyzi7QlMczgbW1yC9hRkSDWvBfXcuX2EqI4oLDr5KvSc_tn58CHEdYJo3uDbnuzlPzeV9q-YyqZbM-1949tMrI0rsIj3DWlYvtSzeju1QS0X3sKuakUy-3bYsZih72rOog" alt="Robot GIF" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-bold text-tech-slate mb-4">Robots Manipuladores</h3>
+                    <p class="text-gray-600 mb-6 flex-grow">Diseño de controladores precisos para brazos robóticos seriales y de cinemática compleja en entornos industriales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plataformas Experimentales -->
+    <section id="plataformas" class="py-24 bg-tech-slate text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <h2 class="text-sm font-bold text-tech-blue uppercase tracking-wide">Infraestructura</h2>
+                    <p class="mt-2 text-4xl font-extrabold mb-6">Plataformas Experimentales</p>
+                    <p class="text-lg text-gray-300 mb-8">
+                        Nuestras teorías se ponen a prueba en la realidad. El laboratorio cuenta con equipo de vanguardia para validar los algoritmos de control en tiempo real.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-tech-blue mr-4"></i> Qball 2 (Quanser)</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-tech-blue mr-4"></i> Pioneer 3-DX</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-tech-blue mr-4"></i> Robot serial 2 G.D.L. con articulaciones flexibles</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-tech-blue mr-4"></i> Hummingbird</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-tech-blue mr-4"></i> Qbot 2e</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-tech-blue mr-4"></i> Arreglos experimentales de convertidores DC/DC</li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://lh3.googleusercontent.com/gg-dl/AHiVA1mGqmQOFM9cjq_aN9aHhInPovhUxSBdFZFgPEx-atO7w-I3M_k5DWtPFcqAp52I0Faeekb8CUd0P65anOq_r-Y-vAJNE9av42mwIe6vGPPJcgbPL49aLFdYWs0EQulKmasOFYOVJe46-ExiW8QrRbH2OPfFe4mbWr6swJ2QycjuPq7EGw" alt="Plataformas" class="rounded-xl shadow-2xl bg-white p-4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nuestro Equipo (Organigrama) -->
+    <section id="equipo" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold text-ipn uppercase tracking-wide">Estructura</h2>
+                <p class="mt-2 text-4xl font-extrabold text-tech-slate">Integrantes del Laboratorio</p>
+            </div>
+
+            <!-- Asesor -->
+            <div class="bg-white rounded-2xl shadow-md p-8 text-center max-w-md mx-auto border-t-4 border-ipn mb-12">
+                <h3 class="text-lg font-bold text-gray-500 uppercase mb-4">Líder Académico / Asesor</h3>
+                <div class="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-4 overflow-hidden border-2 border-ipn">
+                    <i class="fa-solid fa-user-tie text-4xl text-gray-400 mt-5"></i>
+                </div>
+                <h4 class="text-2xl font-bold text-tech-slate">Dr. Eduardo Javier Moreno Valenzuela</h4>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Doctorado -->
+                <div class="bg-white rounded-2xl shadow-md p-8 border-t-4 border-tech-blue">
+                    <h3 class="text-xl font-bold text-center mb-6 uppercase text-tech-slate">Investigadores de Doctorado</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4 p-3 bg-gray-50 rounded-lg">
+                            <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-gray-500"><i class="fa-solid fa-robot"></i></div>
+                            <div>
+                                <p class="font-bold text-lg text-tech-slate">M. en C. Marco Morán</p>
+                                <p class="text-sm text-gray-500">Robots Manipuladores</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 p-3 bg-gray-50 rounded-lg">
+                            <div class="w-12 h-12 bg-gray-200 rounded-full flex items-center justify-center text-gray-500"><i class="fa-solid fa-bolt"></i></div>
+                            <div>
+                                <p class="font-bold text-lg text-tech-slate">M. en C. Daniel Armando Hirales V.</p>
+                                <p class="text-sm text-gray-500">Convertidores de Potencia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Maestría -->
+                <div class="bg-white rounded-2xl shadow-md p-8 border-t-4 border-tech-blue">
+                    <h3 class="text-xl font-bold text-center mb-6 uppercase text-tech-slate">Investigadores de Maestría</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                            <div class="w-10 h-10 bg-gray-200 rounded-full flex-shrink-0"></div>
+                            <div>
+                                <p class="font-bold text-tech-slate leading-tight">Ing. Georgiana Madrid González</p>
+                                <p class="text-xs text-ipn font-semibold">Potencia</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg border border-ipn/30">
+                            <div class="w-10 h-10 bg-gray-200 rounded-full flex-shrink-0 overflow-hidden">
+                                <!-- Tu foto aquí si quisieras ponerla -->
+                                <img src="https://lh3.googleusercontent.com/gg/AJWXcNfJJK3iPtmm2EtXQYsFox6Jpv3SBWbgjZBxxH9HJ_f8wKDkdof_99FuqHIooWyRtFY5C-V_IRlc3zfv4FDnCQ1ioYzAR3YVs8eaAlrpUAbUtsVklWRaPPOiPm6GZncacGiFeWqIADgg65HvGFK8fHgyYFIZtkF9nd6J1UwO3eE8vZcbe-Kxoh9IzbvVg6NTy-Ihja8ZEEWkt5cdE6mKrc9BDLNQo83crsGFCnsloHCZktW4AYOqW-HRVQ0t2phj4Y2aL7RomHncxKPkJ11RBbk_zQQ6kor_WiM=s0" class="w-full h-full object-cover opacity-50">
+                            </div>
+                            <div>
+                                <p class="font-bold text-tech-slate leading-tight">Ing. Germán Amin de la Cruz M.</p>
+                                <p class="text-xs text-ipn font-semibold">Potencia / Microrredes</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                            <div class="w-10 h-10 bg-gray-200 rounded-full flex-shrink-0"></div>
+                            <div>
+                                <p class="font-bold text-tech-slate leading-tight">Ing. Raúl Robles</p>
+                                <p class="text-xs text-ipn font-semibold">Vehículos</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
+                            <div class="w-10 h-10 bg-gray-200 rounded-full flex-shrink-0"></div>
+                            <div>
+                                <p class="font-bold text-tech-slate leading-tight">Ing. Diego García</p>
+                                <p class="text-xs text-ipn font-semibold">Vehículos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                 <img src="https://lh3.googleusercontent.com/gg-dl/AHiVA1m5ZlnZ3WwuJaxVY4YsCoxTG_gX9NOs1leBapGb6Jg4gcP538Ivr_6IMaqLeI8OEUdzzbAQqzARqqutTzSh9IiRHd1FhCFaLHNFCQitJIIW_uQikGoeYNUc4WVUhlmSzPwgJJXhLh4MJ1lfsQ1HItaatMVpkjFulth8VIiwAh1RKLbYaQ" alt="Organigrama Oficial" class="mx-auto rounded-xl shadow-lg w-full max-w-4xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- Logros (CTA) -->
+    <section id="logros" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-extrabold text-tech-slate mb-6">Logros y Publicaciones</h2>
+            <p class="text-lg text-gray-600 mb-8">El Laboratorio de Control contribuye activamente al desarrollo científico nacional e internacional, publicando en revistas indexadas de alto impacto y graduando investigadores de excelencia.</p>
+            
+            <div class="bg-gray-50 rounded-xl p-6 mb-8 text-left border-l-4 border-ipn shadow-sm">
+                <h4 class="font-bold text-xl text-tech-slate">Controlando la energía: Estabilidad para microrredes DC</h4>
+                <p class="text-sm text-ipn font-semibold mb-2">Proyecto Destacado - Ing. Germán Amin de la Cruz Méndez</p>
+                <p class="text-gray-600">Investigación en diseño e implementación de algoritmos de control no lineal avanzado para convertidores electrónicos de potencia, logrando suministros estables frente a cargas de potencia constante.</p>
+            </div>
+
+            <a href="https://citedi.ipn.mx/" target="_blank" class="inline-block bg-tech-slate text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-black transition">
+                Ver Repositorio Completo en CITEDI
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-tech-slate text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center mb-6 md:mb-0">
+                <img src="https://lh3.googleusercontent.com/gg/AJWXcNfJJK3iPtmm2EtXQYsFox6Jpv3SBWbgjZBxxH9HJ_f8wKDkdof_99FuqHIooWyRtFY5C-V_IRlc3zfv4FDnCQ1ioYzAR3YVs8eaAlrpUAbUtsVklWRaPPOiPm6GZncacGiFeWqIADgg65HvGFK8fHgyYFIZtkF9nd6J1UwO3eE8vZcbe-Kxoh9IzbvVg6NTy-Ihja8ZEEWkt5cdE6mKrc9BDLNQo83crsGFCnsloHCZktW4AYOqW-HRVQ0t2phj4Y2aL7RomHncxKPkJ11RBbk_zQQ6kor_WiM=s0" alt="Logo Lab" class="h-10 w-10 rounded-full mr-3 opacity-80">
+                <div>
+                    <p class="text-white font-bold">Laboratorio de Control</p>
+                    <p class="text-sm">CITEDI - Instituto Politécnico Nacional</p>
+                </div>
+            </div>
+            <div class="text-center md:text-right">
+                <p class="text-sm">Tijuana, B.C., México.</p>
+                <p class="text-sm mt-1">&copy; 2026 Laboratorio de Control.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
